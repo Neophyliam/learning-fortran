@@ -434,6 +434,7 @@ Fortran always allocates array elements in column major order.
 |a(3, 1) | a(3, 2) |
 
 In memory:  
+
 | memo-1 | memo-2 | memo-3 | memo-4 | memo-5 | memo-6 |
 |--------|--------|--------|--------|--------|--------|
 |a(1, 1) |a(2, 1) |a(3, 1) |a(1, 2) |a(2, 2) |a(3, 2) |
