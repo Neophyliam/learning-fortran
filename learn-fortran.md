@@ -575,8 +575,8 @@ To ensure a *local* variable unchanged between successive invocations, use
 `save` attribute in the type declaration statement, or **initialize the
 variable in its type declaration statement**.  
 This is like `static` local variables in C. But an intialized local
-variable in type declaration statement does count as static local variable
-in C.
+variable in type declaration statement does not count as static local
+variable in C (I guess).
 
 Pure function/subroutine == Thread safe function in C, except pure
 function/subroutine must be declared with `pure` in Fortran.
