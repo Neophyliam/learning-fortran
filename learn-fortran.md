@@ -532,7 +532,7 @@ deallocate(arr1, stat=status)
 ```
 
 If an expression is assigned to a Fortran 2003 allocatable array of the
-same rank, the  the array is automatically allocated to the correct shape
+same rank, the array is automatically allocated to the correct shape
 if it is unallocated, or it is automatically deallocated and reallocated to
 the correct shape if it was previously allocated with an incompatible
 shape.
@@ -574,14 +574,14 @@ end module test_module
 To ensure a *local* variable unchanged between successive invocations, use
 `save` attribute in the type declaration statement, or **initialize the
 variable in its type declaration statement**.  
-This is like `static` local variables in C. But an intialized local
+This is like `static` local variables in C. But an initialized local
 variable in type declaration statement does not count as static local
 variable in C (I guess).
 
 Pure function/subroutine == Thread safe function in C, except pure
 function/subroutine must be declared with `pure` in Fortran.
 
-Internal precudure:
+Internal procedure:
 ```fortran
 program test
   ...
@@ -606,8 +606,8 @@ real(4) :: temp
 ```
 
 Some compiler will use kind=1 to specify float32 and kind=2 to specify
-float64. Some will use kine=4 to specify float32 and kind=8 to specify
-float64. Fuck Fortran!
+float64. Some will use kind=4 to specify float32 and kind=8 to specify
+float64.
 
 ## Chap. 12
 > 2019-03-13 14:27
@@ -911,7 +911,7 @@ integer, pointer :: i1 = null()
 ```
 
 Whenever a pointer appears in a Fortran expression where a value is
-expected, the value of the target is used instaed of the pointer itself.
+expected, the value of the target is used instead of the pointer itself.
 ```fortran
 p2 = p1  ! both sides expect a variable
 ! is exactly same as
@@ -941,7 +941,7 @@ program array_ptr
 end program array_ptr
 ```
 This can only be used with subscript triplets. Compilation error will
-occure when using with vector subscripts.
+occur when using with vector subscripts.
 
 A case of memory leak:
 ```fortran
